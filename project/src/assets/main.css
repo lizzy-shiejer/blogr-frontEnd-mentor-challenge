@@ -1,0 +1,48 @@
+/* Overpass */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+/* Ubuntu */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Below are general styles that seems to appear most of the time */
+
+/*
+    Typography
+    1. Headings
+    2. paragraphs 
+*/
+
+@layer base {
+  h1 {
+    @apply text-[2.441rem] xl:text-[3.052rem] text-neutral-text leading-snug lg:leading-none  font-ubuntu;
+  }
+  h2 {
+    @apply text-[1.953rem] xl:text-[2.441rem] leading-7 font-medium  font-ubuntu text-primary-headings;
+  }
+  h3 {
+    @apply text-[1.953rem] xl:text-[1.25rem]  leading-7 font-overpass font-semibold text-primary-headings;
+  }
+  h4 {
+    @apply text-[1.25rem] lg:text-[1.2rem];
+  }
+  p {
+    @apply text-[1rem] leading-7 font-overpass text-neutral-body_copy;
+  }
+  /* body{
+    @apply bg-neutral-footer_bg
+  } */
+}
+
+@layer components {
+  .custom_container {
+    @apply mx-4 @md:mx-10 @lg:mx-16 @xl:max-w-5xl;
+  }
+  .btn_cta {
+    @apply rounded-full p-5 xl:py-3 bg-neutral-text text-primary-cta_text font-bold w-[8rem] cursor-pointer;
+  }
+  .btn_cta_transparent {
+    @apply rounded-full p-5 xl:py-3 bg-primary-cta_text text-neutral-text font-bold border border-neutral-text  w-[8rem] cursor-pointer;
+  }
+}
